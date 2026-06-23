@@ -1,0 +1,28 @@
+num_steps: 90
+dt: 0.1
+base_seed: 23
+frame_orientations:
+  i: 0.0
+  j: 0.55
+  m: -0.82
+noise_levels:
+  - 0.0
+  - 0.0015
+  - 0.003
+  - 0.005
+  - 0.0075
+  - 0.01
+  - 0.0125
+  - 0.015
+trials_per_level: 20
+displacement_noise_ratio: 0.6
+direct_window_instants: 4
+robust_window_instants: 6
+condition_number_max: 100000000.0
+robust_window_candidates:
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+rmse_vs_d_noise_level: 0.003

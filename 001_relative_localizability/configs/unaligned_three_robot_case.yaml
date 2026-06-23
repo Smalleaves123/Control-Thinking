@@ -1,0 +1,11 @@
+num_steps: 90
+dt: 0.1
+seed: 13
+angle_noise_std: 0.003
+displacement_noise_std: 0.002
+direct_window_instants: 4
+robust_window_instants: 6
+frame_orientations:
+  i: 0.0
+  j: 0.55
+  m: -0.82

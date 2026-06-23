@@ -1,0 +1,10 @@
+num_steps: 90
+dt: 0.1
+seed: 7
+condition_number_max: 100000000.0
+frame_orientations:
+  i: 0.0
+  j: 0.0
+  m: 0.0
+angle_noise_std: 0.0
+displacement_noise_std: 0.0
