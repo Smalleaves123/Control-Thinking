@@ -23,7 +23,8 @@ The repository keeps the reproduction code and notes. The original paper PDF is 
 Create a local Python environment and install dependencies:
 
 ```bash
-cd /Users/aiziqi/Desktop/Control-Thinking/001_relative_localizability
+git clone https://github.com/Smalleaves123/Control-Thinking.git
+cd Control-Thinking/001_relative_localizability
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -41,7 +42,7 @@ Dependencies used by the code:
 Run the scripts from the project directory:
 
 ```bash
-cd /Users/aiziqi/Desktop/Control-Thinking/001_relative_localizability
+cd Control-Thinking/001_relative_localizability
 ```
 
 ### 1. Aligned Three-Follower Case
@@ -100,9 +101,9 @@ python3 scripts/evaluate_results.py
 
 ## Output Locations
 
-- figures: `/Users/aiziqi/Desktop/Control-Thinking/001_relative_localizability/results/figures`
-- metrics logs: `/Users/aiziqi/Desktop/Control-Thinking/001_relative_localizability/results/logs`
-- optional tables: `/Users/aiziqi/Desktop/Control-Thinking/001_relative_localizability/results/tables`
+- figures: `results/figures`
+- metrics logs: `results/logs`
+- optional tables: `results/tables`
 
 ## Notes For Local And Server Runs
 

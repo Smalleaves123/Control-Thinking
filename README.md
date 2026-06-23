@@ -4,14 +4,15 @@ This repository collects paper-reading notes and code reproductions around multi
 
 ## Projects
 
-- [001_relative_localizability](/Users/aiziqi/Desktop/Control-Thinking/001_relative_localizability/README.md:1): reproduction of the paper *Relative Localizability and Localization for Multirobot Systems*.
+- [001_relative_localizability](001_relative_localizability/README.md): reproduction of the paper *Relative Localizability and Localization for Multirobot Systems*.
 
 ## Quick Start
 
 The current runnable project is `001_relative_localizability`.
 
 ```bash
-cd /Users/aiziqi/Desktop/Control-Thinking/001_relative_localizability
+git clone https://github.com/Smalleaves123/Control-Thinking.git
+cd Control-Thinking/001_relative_localizability
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -29,7 +30,7 @@ python3 scripts/evaluate_results.py
 
 Generated outputs:
 
-- figures: `/Users/aiziqi/Desktop/Control-Thinking/001_relative_localizability/results/figures`
-- metrics logs: `/Users/aiziqi/Desktop/Control-Thinking/001_relative_localizability/results/logs`
+- figures: `001_relative_localizability/results/figures`
+- metrics logs: `001_relative_localizability/results/logs`
 
 The repository is configured not to push generated result files or the original paper PDF.
