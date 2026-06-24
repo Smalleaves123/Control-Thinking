@@ -105,6 +105,12 @@ python3 scripts/evaluate_results.py
 - metrics logs: `results/logs`
 - optional tables: `results/tables`
 
+## Results Summary
+
+The current server-run results and discussion are summarized in:
+
+- `experiment_report.md`
+
 ## Notes For Local And Server Runs
 
 - The aligned and unaligned scripts finish quickly on a normal local machine.

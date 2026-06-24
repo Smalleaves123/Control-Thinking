@@ -73,6 +73,7 @@ def plot_error_curve(
     *,
     title: str,
     ylabel: str,
+    xlabel: str = "time [s]",
     legend_labels: list[str] | None = None,
 ) -> None:
     _prepare_path(save_path)
@@ -86,7 +87,7 @@ def plot_error_curve(
             ax.plot(times, errors[:, index], linewidth=2.0, label=legend_labels[index])
         ax.legend()
     ax.set_title(title)
-    ax.set_xlabel("time [s]")
+    ax.set_xlabel(xlabel)
     ax.set_ylabel(ylabel)
     ax.grid(alpha=0.25)
     fig.tight_layout()

@@ -100,6 +100,7 @@ def main() -> None:
         figures_dir / "rmse_vs_number_of_time_instants.png",
         title=f"Robust RMSE vs Number of Time Instants (noise={stats['rmse_vs_d_noise_level']:.4f} rad)",
         ylabel="position RMSE",
+        xlabel="number of time instants d",
     )
 
     serializable = {key: value.tolist() if hasattr(value, "tolist") else value for key, value in stats.items()}
