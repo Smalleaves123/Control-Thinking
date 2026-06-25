@@ -29,32 +29,35 @@ spec.desiredAngles = [
     atan(3 / sqrt(10))
 ];
 
-s2 = sqrt(2);
-s5 = sqrt(5);
-baseEdges = [
+spec.desiredBearingPositions = [
+     1, 0;
+     0, 1;
+    -1, 0;
+     0, 2;
+    -2, 1
+];
+
+% The bearing-based simulation in Figs. 14-17 uses the directed constraints
+% shown in Fig. 15/17 rather than the reciprocal closure we tested earlier.
+spec.bearingEdges = [
+    1, 4;
+    1, 2;
+    2, 3;
+    2, 4;
+    3, 4;
     3, 1;
-    2, 1;
-    3, 2;
-    4, 2;
-    4, 1;
+    4, 5;
     4, 3;
-    5, 4;
     5, 2;
     5, 1
 ];
-baseBearings = [
-     1,              0;
-     s2 / 2,        -s2 / 2;
-     s2 / 2,         s2 / 2;
-     0,             -1;
-     s5 / 5,        -2 * s5 / 5;
-    -s5 / 5,        -2 * s5 / 5;
-     2 * s5 / 5,    -s5 / 5;
-    -s5 / 5,        -2 * s5 / 5;
-     3 / sqrt(10),  -1 / sqrt(10)
-];
 
-edgeCount = size(baseEdges, 1);
-spec.bearingEdges = [baseEdges; fliplr(baseEdges)];
-spec.desiredBearings = [baseBearings; -baseBearings];
+edgeCount = size(spec.bearingEdges, 1);
+spec.desiredBearings = zeros(edgeCount, 2);
+for idx = 1:edgeCount
+    i = spec.bearingEdges(idx, 1);
+    j = spec.bearingEdges(idx, 2);
+    delta = spec.desiredBearingPositions(j, :) - spec.desiredBearingPositions(i, :);
+    spec.desiredBearings(idx, :) = delta / norm(delta);
+end
 end
