@@ -16,3 +16,14 @@ env/
 !001_relative_localizability/results/animations/.gitkeep
 
 001_relative_localizability/paper/*.pdf
+
+002_angle_rigidity/results/figures/*
+!002_angle_rigidity/results/figures/.gitkeep
+002_angle_rigidity/results/logs/*
+!002_angle_rigidity/results/logs/.gitkeep
+002_angle_rigidity/results/tables/*
+!002_angle_rigidity/results/tables/.gitkeep
+002_angle_rigidity/results/animations/*
+!002_angle_rigidity/results/animations/.gitkeep
+
+002_angle_rigidity/paper/*.pdf

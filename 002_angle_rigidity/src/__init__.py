@@ -1,0 +1,1 @@
+"""Angle rigidity reproduction package."""
