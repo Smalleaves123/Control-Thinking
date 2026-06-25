@@ -14,7 +14,7 @@
 2. Compute the scalar angle error `alpha_jik - alpha_jik*`.
 3. Compute the local direction `z_ij + z_ik`.
 4. Add `-(alpha_jik - alpha_jik*) (z_ij + z_ik)` to agent `i`'s control input.
-5. Integrate the single-integrator dynamics with Euler integration.
+5. Integrate the single-integrator dynamics with Euler integration in MATLAB.
 
 ## Bearing-Based Comparison
 

@@ -27,3 +27,5 @@ env/
 !002_angle_rigidity/results/animations/.gitkeep
 
 002_angle_rigidity/paper/*.pdf
+
+*.asv

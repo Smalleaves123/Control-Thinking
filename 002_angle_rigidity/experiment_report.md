@@ -7,8 +7,8 @@ The scripts write figures to `results/figures` and JSON metrics to `results/logs
 Recommended run order:
 
 ```bash
-python3 scripts/run_angle_control.py
-python3 scripts/run_bearing_comparison.py
+matlab -batch "run('scripts/run_angle_control.m')"
+matlab -batch "run('scripts/run_bearing_comparison.m')"
 ```
 
 Expected checks:

@@ -21,21 +21,14 @@ The repository keeps notes and reproduction code only. The original paper PDF is
 
 ## Environment Setup
 
-Create a local Python environment and install dependencies:
+Install MATLAB R2020b or newer. The current scripts use base MATLAB only and do not require extra toolboxes.
 
 ```bash
 git clone https://github.com/Smalleaves123/Control-Thinking.git
 cd Control-Thinking/002_angle_rigidity
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
 ```
 
-Dependencies used by the code:
-
-- `numpy`
-- `matplotlib`
-- `PyYAML`
+See `requirements.md` for the environment note.
 
 ## How To Run
 
@@ -50,13 +43,13 @@ cd Control-Thinking/002_angle_rigidity
 This reproduces the main five-agent angle-only control example in Section V-A. The script uses the initial positions and desired angles listed in the paper and includes a 5 degree local-frame misalignment for agent 1.
 
 ```bash
-python3 scripts/run_angle_control.py
+matlab -batch "run('scripts/run_angle_control.m')"
 ```
 
-Or explicitly pass the config:
+In the MATLAB desktop, run:
 
-```bash
-python3 scripts/run_angle_control.py --config configs/five_agent_angle_control.yaml
+```matlab
+run('scripts/run_angle_control.m')
 ```
 
 ### 2. Bearing-Based Comparison
@@ -64,13 +57,13 @@ python3 scripts/run_angle_control.py --config configs/five_agent_angle_control.y
 This compares the bearing-rigidity controller without and with the same local-frame misalignment.
 
 ```bash
-python3 scripts/run_bearing_comparison.py
+matlab -batch "run('scripts/run_bearing_comparison.m')"
 ```
 
-Or:
+In the MATLAB desktop, run:
 
-```bash
-python3 scripts/run_bearing_comparison.py --config configs/bearing_comparison.yaml
+```matlab
+run('scripts/run_bearing_comparison.m')
 ```
 
 ## Output Locations
@@ -88,6 +81,7 @@ The current code follows the paper at two levels:
 - It builds the angle rigidity matrix `R_a(p)` from ordered angle triplets and checks the rank condition `rank(R_a(p)) = 2N - 4`.
 - It implements the unified angle-only control law in equation (58) for the five-agent example in Section V-A.
 - It implements the bearing-based comparison controller in equation (61), including the coordinate-frame misalignment case used to show why angle-only control is frame independent.
+- It writes PNG figures and JSON metrics from MATLAB scripts.
 
 ## Reading Order
 

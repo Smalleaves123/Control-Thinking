@@ -33,11 +33,8 @@ For the angle-rigidity project:
 
 ```bash
 cd ../002_angle_rigidity
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python3 scripts/run_angle_control.py
-python3 scripts/run_bearing_comparison.py
+matlab -batch "run('scripts/run_angle_control.m')"
+matlab -batch "run('scripts/run_bearing_comparison.m')"
 ```
 
 Generated outputs:
