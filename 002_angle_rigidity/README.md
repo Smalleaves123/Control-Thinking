@@ -21,7 +21,7 @@ The repository keeps notes and reproduction code only. The original paper PDF is
 
 ## Environment Setup
 
-Install MATLAB R2020b or newer. The current scripts use base MATLAB only and do not require extra toolboxes.
+Install MATLAB R2020b or newer, or use a recent Octave version. The current scripts use base MATLAB-style functions only and are compatible with Octave after the repository-side fixes in this project.
 
 ```bash
 git clone https://github.com/Smalleaves123/Control-Thinking.git
@@ -44,6 +44,7 @@ This reproduces the main five-agent angle-only control example in Section V-A. T
 
 ```bash
 matlab -batch "run('scripts/run_angle_control.m')"
+octave --quiet --eval "run('scripts/run_angle_control.m')"
 ```
 
 In the MATLAB desktop, run:
@@ -58,6 +59,7 @@ This compares the bearing-rigidity controller without and with the same local-fr
 
 ```bash
 matlab -batch "run('scripts/run_bearing_comparison.m')"
+octave --quiet --eval "run('scripts/run_bearing_comparison.m')"
 ```
 
 In the MATLAB desktop, run:
@@ -81,7 +83,7 @@ The current code follows the paper at two levels:
 - It builds the angle rigidity matrix `R_a(p)` from ordered angle triplets and checks the rank condition `rank(R_a(p)) = 2N - 4`.
 - It implements the unified angle-only control law in equation (58) for the five-agent example in Section V-A.
 - It implements the bearing-based comparison controller in equation (61), including the coordinate-frame misalignment case used to show why angle-only control is frame independent.
-- It writes PNG figures and JSON metrics from MATLAB scripts.
+- It writes PNG figures and JSON metrics from MATLAB or Octave scripts.
 
 ## Reading Order
 

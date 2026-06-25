@@ -31,7 +31,7 @@ spec.desiredAngles = [
 
 s2 = sqrt(2);
 s5 = sqrt(5);
-spec.bearingEdges = [
+baseEdges = [
     3, 1;
     2, 1;
     3, 2;
@@ -42,8 +42,7 @@ spec.bearingEdges = [
     5, 2;
     5, 1
 ];
-
-spec.desiredBearings = [
+baseBearings = [
      1,              0;
      s2 / 2,        -s2 / 2;
      s2 / 2,         s2 / 2;
@@ -54,4 +53,8 @@ spec.desiredBearings = [
     -s5 / 5,        -2 * s5 / 5;
      3 / sqrt(10),  -1 / sqrt(10)
 ];
+
+edgeCount = size(baseEdges, 1);
+spec.bearingEdges = [baseEdges; fliplr(baseEdges)];
+spec.desiredBearings = [baseBearings; -baseBearings];
 end

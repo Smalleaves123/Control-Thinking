@@ -12,7 +12,7 @@ colors = [
 
 fig = figure('Visible', 'off');
 hold on;
-lineHandles = gobjects(size(trajectory, 2), 1);
+lineHandles = zeros(size(trajectory, 2), 1);
 for idx = 1:size(trajectory, 2)
     series = squeeze(trajectory(:, idx, :));
     lineHandles(idx) = plot(series(:, 1), series(:, 2), 'LineWidth', 2, 'Color', colors(idx, :));
@@ -24,7 +24,7 @@ xlabel('x');
 ylabel('y');
 axis equal;
 grid on;
-legend(lineHandles, {'agent 1', 'agent 2', 'agent 3', 'agent 4', 'agent 5'}, 'Location', 'best');
+legend(lineHandles, {'agent 1', 'agent 2', 'agent 3', 'agent 4', 'agent 5'}, 'Location', 'northeast');
 print(fig, filePath, '-dpng', '-r180');
 close(fig);
 end

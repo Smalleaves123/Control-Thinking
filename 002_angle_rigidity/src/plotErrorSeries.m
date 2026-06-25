@@ -8,7 +8,8 @@ title(plotTitle);
 xlabel('time [s]');
 ylabel(yLabelText);
 grid on;
-legend(compose('constraint %d', 1:size(errors, 2)), 'Location', 'best');
+labels = arrayfun(@(idx) sprintf('constraint %d', idx), 1:size(errors, 2), 'UniformOutput', false);
+legend(labels, 'Location', 'northeast');
 print(fig, filePath, '-dpng', '-r180');
 close(fig);
 end
