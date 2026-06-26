@@ -28,4 +28,16 @@ env/
 
 002_angle_rigidity/paper/*.pdf
 
+003_optimal_sensor_scheduling/results/figures/*
+!003_optimal_sensor_scheduling/results/figures/.gitkeep
+003_optimal_sensor_scheduling/results/logs/*
+!003_optimal_sensor_scheduling/results/logs/.gitkeep
+003_optimal_sensor_scheduling/results/tables/*
+!003_optimal_sensor_scheduling/results/tables/.gitkeep
+003_optimal_sensor_scheduling/results/animations/*
+!003_optimal_sensor_scheduling/results/animations/.gitkeep
+
+003_optimal_sensor_scheduling/paper/*.pdf
+
 *.asv
+octave-workspace
